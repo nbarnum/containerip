@@ -1,4 +1,4 @@
-[![](https://images.microbadger.com/badges/image/nbarnum/containerip.svg)](https://microbadger.com/images/nbarnum/containerip "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/nbarnum/containerip.svg)](https://microbadger.com/images/nbarnum/containerip "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/nbarnum/containerip.svg)](https://microbadger.com/images/nbarnum/containerip "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/nbarnum/containerip.svg)](https://microbadger.com/images/nbarnum/containerip "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/nbarnum/containerip.svg)](https://microbadger.com/images/nbarnum/containerip "Get your own commit badge on microbadger.com")
 
 # containerip
 
