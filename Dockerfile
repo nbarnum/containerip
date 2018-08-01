@@ -4,6 +4,11 @@ RUN cd /src && \
     CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w' -o server server.go
 
 FROM scratch
+
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/nbarnum/containerip"
 COPY --from=build-env /src/server /
 EXPOSE 80
 ENTRYPOINT ["/server"]

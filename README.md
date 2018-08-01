@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/nbarnum/containerip.svg)](https://microbadger.com/images/nbarnum/containerip "Get your own image badge on microbadger.com")
+
 # containerip
 
 Go HTTP server returns all of the container's IPv4 addresses.
