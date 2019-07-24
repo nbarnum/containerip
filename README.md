@@ -14,11 +14,18 @@ Run the container:
 $ docker run --rm -it -p 8080:80 nbarnum/containerip
 ```
 
-Get the IPs:
+Get the IP:
 
 ```
 $ curl http://localhost:8080
 172.17.0.2
+```
+
+Get the hostname:
+
+```
+$ curl http://localhost:8080/hostname
+1dc38af96b21
 ```
 
 ### Build Docker image

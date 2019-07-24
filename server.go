@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"net"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -32,6 +33,11 @@ func getIpv4Addresses() string {
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, getIpv4Addresses()+"\n")
+	})
+
+	http.HandleFunc("/hostname", func(w http.ResponseWriter, r *http.Request) {
+		hostname, _ := os.Hostname()
+		fmt.Fprintf(w, hostname+"\n")
 	})
 
 	http.ListenAndServe(":80", nil)
