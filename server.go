@@ -6,6 +6,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net"
 	"net/http"
 	"os"
@@ -40,5 +41,13 @@ func main() {
 		fmt.Fprintf(w, hostname+"\n")
 	})
 
-	http.ListenAndServe(":80", nil)
+	listenPort := "80"
+	port, ok := os.LookupEnv("PORT")
+	if ok {
+		listenPort = port
+	}
+
+	log.Printf("starting webserver on port :%s", listenPort)
+
+	log.Fatal(http.ListenAndServe(":"+listenPort, nil))
 }
